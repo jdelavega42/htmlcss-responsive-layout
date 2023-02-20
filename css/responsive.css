@@ -1,0 +1,35 @@
+@media  screen and (min-width: 768px) {
+    /* !HEADER */
+
+    
+    /* !MAIN */
+
+    /* !FOOTER */
+}
+
+@media  screen and (min-width: 992px) {
+    /* !HEADER */
+        .container {
+        width: 80%;
+    }
+    .menu {
+        display: flex;
+    }
+    #hamburger {
+        display: none;
+    }
+    /* !MAIN */
+
+    /* !FOOTER */
+}
+
+@media  screen and (min-width: 1200px) {
+    /* !COMMON */
+
+    /* !HEADER */
+
+    
+    /* !MAIN */
+
+    /* !FOOTER */
+}
