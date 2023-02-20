@@ -3,7 +3,21 @@
 
     
     /* !MAIN */
+    .row {
+        flex-direction: row;
+    }
+    .col3 {
+        width: calc(100% / 3 - 2rem / 3) ;
+    }
 
+    .features .col3:first-of-type {
+        width: calc((((100% / 3) - (2rem / 3)) * 2) + (2rem / 2));
+        text-align: left;
+    }
+ 
+    .right-col3 img {
+        width: 50%;
+    }
     /* !FOOTER */
 }
 
@@ -19,6 +33,17 @@
         display: none;
     }
     /* !MAIN */
+    .features .col3:first-of-type {
+        display: flex;
+    }
+
+    .right-col3 {
+        align-self: flex-end;
+    }
+
+    .right-col3 img {
+        width: 100%;
+    }
 
     /* !FOOTER */
 }

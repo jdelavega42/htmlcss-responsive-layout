@@ -23,9 +23,6 @@ body {
     margin: 0 auto;
 }
 
-section {
-
-}
 
 .container {
     margin: 0 auto;
@@ -48,13 +45,40 @@ a {
 /* @ utilities */
 .button {
     border-radius: 1em;
+}
+
+.white-btn {
+    background-color: white;
+    color: var(--bg-3);
     padding: .5em;
 }
 
 .blue-btn {
-    background-color: white;
-    color: var(--bg-3);
+    display: inline-block;
+    background-color: var(--bg-3);
+    color: white;
+    margin: 1rem 0;
+    padding: .5em 3em;
 }
+
+/* @ grid */
+.row {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+
+.col3 {
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/* @ font */
+    .subtitle {
+        color: var(--bg-3);
+        margin: 1em 0;
+    }
+
 /* !HEADER */
 .header {
     background-color: var(--bg-3);
@@ -87,17 +111,34 @@ main {
     padding-top: var(--navbar);
 }
 
-main .container {
-    /* debug */
-    height: 100px;
-}
-
 main section:nth-child(odd) {
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 main section:nth-child(even) {
     background-color: var(--bg-1);
+}
+main .container {
+    margin: 3rem auto;
+}
+/* @features */
+.features .col3 {
+    background-color: var(--bg-2);    
+}
+
+.feature-card {
+    text-align: center;
+}
+
+.features .col3:first-of-type {
+    padding-bottom: 0;
+}
+
+.right-col3 img {
+    display: block;
+}
+.feature-card i {
+    color: var(--bg-3);
 }
 /* !MAIN */
 
