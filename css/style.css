@@ -41,6 +41,18 @@ a {
     margin: 0 auto;
 }
 
+
+main .container ,
+footer .container {
+    padding: var(--v-padding);
+}
+
+.icon {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
 /* @ utilities */
 
 .button {
@@ -103,7 +115,8 @@ h1,
 .planning .reverse ,
 .testimonials ,
 .primary-title,
-.call-to-action {
+.call-to-action,
+.footer {
     text-align: center;
 }
 /* !HEADER */
@@ -164,13 +177,10 @@ main section:nth-child(even) ,
 }
 
 main section:nth-child(even) .primary-title ,
-.testimonials .container .card {
+.testimonials .container .card ,
+.call-to-action .container {
     color: var(--clr-6);
 
-}
-
-main .container {
-    padding: var(--v-padding);
 }
 
 /* @features */
@@ -258,13 +268,38 @@ main .container {
 .about-us .text {
     margin: 3rem 0;
 }
+
+/* @call to action */
+.attention {
+    font-size: 3rem;
+    color: var(--clr-5);
+}
+
+.dot {
+    font-size: .2rem;
+
+}
+
+.circle::before {
+    font: var(--fa-font-solid);
+    content: "\f111";
+    font-family: "Font Awesome 6 free"; 
+    font-size: .3rem;
+    position: relative;
+    bottom: 3px;
+}
 /* !MAIN */
 
 
 /* !FOOTER */
 .footer {
     background-color: var(--clr-4);
+    color: var(--clr-6);
+
 }
 
-
+.footer a{
+    text-decoration: underline;
+    color: var(--clr-1);
+}
 /* !FOOTER */
