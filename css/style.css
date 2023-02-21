@@ -17,7 +17,8 @@
     --clr-5: #FDC15F;
     --clr-6: #ffffff;
     --navbar: 4rem;
-    --v-padding: 3rem 1rem;
+    --v-padding: 3rem 1.5rem;
+    --max-width: 1080px;
 }
 
 body {
@@ -55,40 +56,26 @@ footer .container {
 
 /* @ utilities */
 
-.button {
-    border-radius: 1em;
+.long-btn {
+    color: var(--clr-6);
+    display: inline-block;
+    margin: 1rem 0;
+    padding: .5em 3em;
+    border-radius: 1rem;
 }
 
-.white-btn {
+.short-btn {
+    padding: .5rem;
     background-color: var(--clr-6);
     color: var(--clr-3);
-    padding: .5em;
+    border-radius: 1rem;
 }
 
-.blue-btn {
-    display: inline-block;
-    background-color: var(--clr-3);
-    color: var(--clr-6);
-    margin: 1rem 0;
-    padding: .5em 3em;
-}
-
-.purple-btn {
-    display: inline-block;
-    background-color: var(--clr-1);
-    color: var(--clr-6);
-    margin: 1rem 0;
-    padding: .5em 3em;
-}
 /* @ grid */
 .row {
     display: flex;
     flex-flow: column wrap;
     gap: 1rem;
-}
-.card,
-.col {
-    padding: 1rem;
 }
 
 .card {
@@ -107,6 +94,11 @@ h1,
 .name {
     margin: 1em 0;
 }
+
+.col ,
+.card {
+    padding: 1rem;
+}
 .name {
     font-size: 1.5rem;
 }
@@ -119,11 +111,13 @@ h1,
 .footer {
     text-align: center;
 }
-/* !HEADER */
+/* !COMMON */
 
+
+/* !HEADER */
 .header {
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     background-color: var(--clr-3);
     position: fixed;
     top: 0;
@@ -132,6 +126,7 @@ h1,
     color: var(--clr-6);
     z-index: 999;
 }
+
 /* @navbar */
 .navbar {
     display: flex;
@@ -151,7 +146,6 @@ h1,
 
 
 /* !MAIN */
-
 main {
     padding-top: var(--navbar);
 }
@@ -189,7 +183,7 @@ main section:nth-child(even) .primary-title ,
 }
 
 .features .subtitle ,
-.features i {
+.features i:not(:first-of-type) {
     color: var(--clr-3);
 }
 
@@ -201,6 +195,10 @@ main section:nth-child(even) .primary-title ,
     display: block;
 }
 
+.features .long-btn {
+    background-color: var(--clr-3);
+    color: var(--clr-6);
+}
 /* @planning */
 .planning{
     color: var(--clr-6);
@@ -250,6 +248,7 @@ main section:nth-child(even) .primary-title ,
 .benefits-text {
     color: var(--clr-4);
 }
+
 /* @about us */
 .about-us .profile {
     position: relative;
@@ -268,7 +267,10 @@ main section:nth-child(even) .primary-title ,
 .about-us .text {
     margin: 3rem 0;
 }
-
+.about-us .short-btn {
+    background-color: var(--clr-1);
+    color: var(--clr-6);
+}
 /* @call to action */
 .attention {
     font-size: 3rem;
@@ -287,6 +289,11 @@ main section:nth-child(even) .primary-title ,
     font-size: .3rem;
     position: relative;
     bottom: 3px;
+}
+
+.call-to-action .long-btn {
+    background-color: var(--clr-6);
+    color: var(--clr-1);
 }
 /* !MAIN */
 

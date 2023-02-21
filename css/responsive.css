@@ -43,8 +43,13 @@
     .about-us .left {
         width: calc((((100% / 3) - (2rem / 3)) * 2) + (2rem / 2));
     }
+
     .about-us .right {
         width: calc(100% / 3 - 2rem / 3) ;
+    }
+
+    .call-to-action .long-btn {
+transform: scale(1.5);
     }
     /* !FOOTER */
 }
@@ -106,8 +111,15 @@
 
 @media  screen and (min-width: 1200px) {
     /* !COMMON */
-
+    .container {
+        max-width: var(--max-width);
+    }
+    
     /* !HEADER */
+    .navbar {
+        max-width: var(--max-width);
+
+    }
 
     
     /* !MAIN */
