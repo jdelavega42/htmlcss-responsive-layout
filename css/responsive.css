@@ -3,10 +3,11 @@
 
     
     /* !MAIN */
-    .row {
+    main .row {
         flex-direction: row;
     }
-    .col3 {
+    /* @features */
+    .features .col {
         width: calc(100% / 3 - 2rem / 3) ;
     }
 
@@ -16,6 +17,34 @@
  
     .right-double img {
         width: 50%;
+    }
+
+/* @testimonials */
+    .quote {
+        text-align: left;
+    }
+    .testimonials .row {
+        align-items: center;
+    }
+    .testimonials .profile {
+        width: calc(30% - 1rem);
+    }
+
+    .testimonials .quote {
+        width: 70%;
+    }
+
+    /* @benefits */
+    .benefits .col {
+        width: calc(100% / 2 - 1rem / 2);
+    }
+    
+    /* @about-us */
+    .about-us .left {
+        width: calc((((100% / 3) - (2rem / 3)) * 2) + (2rem / 2));
+    }
+    .about-us .right {
+        width: calc(100% / 3 - 2rem / 3) ;
     }
     /* !FOOTER */
 }
@@ -32,12 +61,15 @@
         width: 80%;
         margin: 0 auto;
     }
+
     .menu {
         display: flex;
     }
+
     #hamburger {
         display: none;
     }
+
     /* !MAIN */
     /* @features */
     .double {
@@ -53,15 +85,21 @@
     }
 
     /* @planning */
-    .col2 {
+    .planning .col {
         width: calc((100% / 2) - (1rem / 2));
     }
+
     .planning .right {
         align-self: flex-end;
     }
+
     .planning .reverse {
-        width: 60%;
-        height: 60%;
+        width: 50%;
+    }
+
+    /* @benefits */
+    .benefits .col {
+        width: calc((100% / 3) - (2rem / 3));
     }
     /* !FOOTER */
 }

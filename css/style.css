@@ -22,7 +22,6 @@
 
 body {
     font-family: 'PT Sans', sans-serif;
-    /* margin: 0 auto; */
 }
 
 img {
@@ -63,6 +62,7 @@ a {
 }
 
 .purple-btn {
+    display: inline-block;
     background-color: var(--clr-1);
     color: var(--clr-6);
     margin: 1rem 0;
@@ -74,27 +74,38 @@ a {
     flex-flow: column wrap;
     gap: 1rem;
 }
-
-.card {
+.card,
+.col {
     padding: 1rem;
-    border-radius: 3rem;
-    text-align: center;
 }
 
-.col3 {
-    padding: 1rem;
+.card {
+    border-radius: 3rem;
+}
+
+.col {
     border-radius: 1rem;
-    text-align: center;
 }
 
 /* @ font */
 h1,
+.primary-title,
 .title,
-.subtitle {
+.subtitle,
+.name {
     margin: 1em 0;
 }
+.name {
+    font-size: 1.5rem;
+}
 
-
+.features .col:not(:first-of-type) ,
+.planning .reverse ,
+.testimonials ,
+.primary-title,
+.call-to-action {
+    text-align: center;
+}
 /* !HEADER */
 
 .header {
@@ -106,8 +117,9 @@ h1,
     right: 0;
     left: 0;
     color: var(--clr-6);
+    z-index: 999;
 }
-
+/* @navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -131,13 +143,30 @@ main {
     padding-top: var(--navbar);
 }
 
-main section:nth-child(odd) {
+main section:nth-child(odd) ,
+.benefits .col {
     background-color: var(--clr-6);
 
 }
 
-main section:nth-child(even) {
+main section:nth-child(odd) .primary-title ,
+.benefits .col ,
+.profile , 
+.big-title ,
+.about-us .title {
+    color: var(--clr-1);
+
+}
+
+main section:nth-child(even) ,
+.testimonials .container .card {
     background-color: var(--clr-1);
+}
+
+main section:nth-child(even) .primary-title ,
+.testimonials .container .card {
+    color: var(--clr-6);
+
 }
 
 main .container {
@@ -145,21 +174,17 @@ main .container {
 }
 
 /* @features */
-.features .col3 {
+.features .col {
     background-color: var(--clr-2);    
 }
 
-.features .subtitle {
-    color: var(--clr-3);
-}
-
+.features .subtitle ,
 .features i {
     color: var(--clr-3);
 }
 
 .double {
     padding-bottom: 0;
-    text-align: left;
 }
 
 .right-double img {
@@ -193,11 +218,50 @@ main .container {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* @testimonials */
+.testimonials .card {
+    margin: 2rem auto;
+}
+
+.profile img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+/* @benefits */
+.number {
+    font-size: 2.5rem;
+}
+
+.benefits-text {
+    color: var(--clr-4);
+}
+/* @about us */
+.about-us .profile {
+    position: relative;
+    text-align: center;
+}
+
+.about-us .profile > i {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(100px);
+}
+.big-title {
+    font-size: 3rem;
+}
+.about-us .text {
+    margin: 3rem 0;
+}
 /* !MAIN */
 
 
 /* !FOOTER */
-
 .footer {
     background-color: var(--clr-4);
 }
